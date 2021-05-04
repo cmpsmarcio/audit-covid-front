@@ -7,6 +7,7 @@ const Button = styled.button`
   color: #FDFDFD;
   font-size: 17px;
   padding: 15px 50px;
-  float: right;
+  margin-left: 80%;
+  display: block;
 `
 export default Button

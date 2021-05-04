@@ -1,13 +1,8 @@
 import styled from 'styled-components'
 
-const InputNumber = styled.input.attrs({
-  type:"number"
-})`
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-  };
+const Input = styled.input`
   width: 100%;
+  font-size: 13px;
   padding: 12px 10px;
   margin: 8px 0 20px;
   display: inline-block;
@@ -17,4 +12,4 @@ const InputNumber = styled.input.attrs({
   border-left: 3px solid #ED145B;
 `
 
-export default InputNumber
+export default Input

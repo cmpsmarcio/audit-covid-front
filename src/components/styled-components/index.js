@@ -1,9 +1,11 @@
-import Form from './Form.js'
-import Button from './Button.js'
-import Input from './Input.js'
-import Select from './Select.js'
-import Label from './Label.js'
-import InputNumber from './InputNumber.js'
+import Form from './Form.jsx'
+import Button from './Button.jsx'
+import Input from './Input.jsx'
+import Select from './Select.jsx'
+import Label from './Label.jsx'
+import InputNumber from './InputNumber.jsx'
+import InputDate from './InputDate.jsx'
+import UserList from './UserList'
 
 export {
   Form,
@@ -11,5 +13,7 @@ export {
   Input,
   Select,
   Label,
-  InputNumber
+  InputNumber,
+  InputDate,
+  UserList,
 }

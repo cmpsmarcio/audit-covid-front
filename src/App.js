@@ -1,11 +1,16 @@
-import QuestionForm from './components/QuestionForm.js'
+import { BrowserRouter, Switch, Route} from 'react-router-dom'
+import AnswerList from './components/AnswerList.jsx'
+import QuestionForm from './components/QuestionForm.jsx'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <QuestionForm />
-      </header>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={QuestionForm} />
+          <Route path="/list" component={AnswerList} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
