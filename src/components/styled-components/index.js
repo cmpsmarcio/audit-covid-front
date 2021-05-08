@@ -5,7 +5,8 @@ import Select from './Select.jsx'
 import Label from './Label.jsx'
 import InputNumber from './InputNumber.jsx'
 import InputDate from './InputDate.jsx'
-import UserList from './UserList'
+import UserList from './UserList.jsx'
+import Bunner from './Bunner.jsx'
 
 export {
   Form,
@@ -16,4 +17,5 @@ export {
   InputNumber,
   InputDate,
   UserList,
+  Bunner,
 }

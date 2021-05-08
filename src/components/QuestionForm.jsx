@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Bunner from './Bunner.jsx'
-import { Button, Form, Input, Select, Label, InputNumber, InputDate } from './styled-components/index.js'
-import FormtDTO from './helper/FormDTO'
+import { Bunner, Button, Form, Input, Select, Label, InputNumber, InputDate } from './styled-components/index.js'
+
 import { useHistory } from 'react-router-dom'
+import { postFormData } from './service/api.js'
 
 export default function QuestionForm () {
   const [form, setForm] = useState({})
@@ -23,16 +23,9 @@ export default function QuestionForm () {
 
   async function handleSubmit(event) {
     event.preventDefault()
-    let data = new FormtDTO().transformData(form)
-
-    fetch('http://localhost:8080/v1/person', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(data)
-    }).then(res => {
-      console.log(res.json())
+    if (await postFormData(form)) {
       history.push("/message")
-    })
+    }
   }
 
   return (
@@ -59,11 +52,12 @@ export default function QuestionForm () {
         <option value="LIGHT">Leves</option>
         <option value="SERIOUS">Graves</option>
       </Select>
-      <Label htmlFor="symptoms">Quais foram sintomas:</Label>
+      <Label htmlFor="symptoms">Quais foram sintomas: (Separados por vírgula)</Label>
       <Input id="symptoms" name="symptoms" placeholder="febre, dor de cabeça..." onChange={e => handleChange(e)} ></Input>
       <Label htmlFor="symptomsRemainedAfterRecovery">Os sintomas permaneceram após a recuperação?</Label>
       <Select id="symptomsRemainedAfterRecovery" name="symptomsRemainedAfterRecovery" defaultValue="" onChange={e => handleChange(e)} required>
         <option value="" />
+        <option value="false">Não se aplica</option>
         <option value="false">Não</option>
         <option value="true">Sim</option>
       </Select>
