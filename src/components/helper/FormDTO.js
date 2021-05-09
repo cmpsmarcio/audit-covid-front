@@ -1,4 +1,3 @@
-
 export default class FormtDTO {
   transformData(formData) {
     return {
@@ -14,16 +13,12 @@ export default class FormtDTO {
           formData.firstVaccinatedDate,
           formData.secondVaccinatedDate
         ],
-        symptomsData: [
-          {
-            symptoms: 
-              (formData.symptoms || "").split(',')
-            ,
-            symptomsSeverity: formData.symptomsSeverity,
-            symptomsRemainedAfterRecovery: formData.symptomsRemainedAfterRecovery,
-          }
-        ]
-      }   
-    }  
+        symptomsData: [{
+          symptoms: (formData.symptoms || "").split(',').map(item => item.trim()),
+          symptomsSeverity: formData.symptomsSeverity,
+          symptomsRemainedAfterRecovery: formData.symptomsRemainedAfterRecovery,
+        }]
+      }
+    }
   }
 }

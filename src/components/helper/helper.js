@@ -1,4 +1,4 @@
-function booleanToTextPtBr (value) {
+function booleanToTextPtBr(value) {
   if (value) return "Sim"
   if (!value) return "Não"
 
@@ -6,6 +6,10 @@ function booleanToTextPtBr (value) {
 }
 
 function dateToString(date) {
+  if (!date || date === '') {
+    return new Date().toLocaleDateString("pt-BR")
+  }
+
   let infoDate = date.split('-')
   return `${infoDate[2]}/${infoDate[1]}/${infoDate[0]}`
 }
