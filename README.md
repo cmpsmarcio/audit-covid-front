@@ -13,6 +13,7 @@ Run this command to install all dependencies of project.
 ### `npm start`
 
 Runs the app in the development mode.\
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Open [http://localhost:3000/list](http://localhost:3000/list) to view a list of data in the browser.
