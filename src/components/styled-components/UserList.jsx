@@ -8,7 +8,11 @@ const UserList = styled.div`
   background-color: #E2E2E2;
   display: block;
   width: 60%;
-  height: 4rem;
+  height: 5.5rem;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.705rem;
+  color: #3f3c3c;
 
   img {
     width: 3.5rem;
@@ -17,17 +21,25 @@ const UserList = styled.div`
     float: left;
   }
 
-  Label:nth-child(2) {
-    font-size: 1.2rem;
+  span {
+    float:  right;
+    font-size: 0.685rem;
+    font-weight: bold;
+    color: #646464;
+  }
+
+  div {
+    display: inline-block;
+  }
+
+  Label:nth-child(1) {
+    font-size: 1rem;
     font-weight: 800;
-    margin: 5px;
     color: #ED145B;
   }
 
   Label {
-    font-family: Comfortaa, Arial;
-    font-size: 0.885rem;
-    color: #3f3c3c;
+    padding: 2px;
   }
 `
 

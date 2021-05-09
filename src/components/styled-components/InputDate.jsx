@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import DatePicker from 'react-datepicker'
-import "react-datepicker/dist/react-datepicker.css";
 
-const InputDate = styled(DatePicker)`
+const InputDate = styled.input.attrs({
+  type:"date"
+})`
   height: 37px;
   font-size: 13px;
   margin: 8px 0 20px;

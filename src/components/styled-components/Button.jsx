@@ -9,5 +9,9 @@ const Button = styled.button`
   padding: 15px 50px;
   margin-left: 80%;
   display: block;
+
+  &.hover {
+    background: #186294;
+  }
 `
 export default Button
